@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon"  type="png" href="images/logo/logo.png">
+    <title>Avateto-Poteto with personality</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- Potato Character Display -->
+
+        <div class="potato-character">
+            <img class="body img " id="Potatobody" src="images/pateto shape/pateto-shape.png" alt="Potato body">
+            <img class="face img"  id="Potatoface"src="images/kawaii faces/image (13).png" alt="Face">
+            <img class="left-hand img"  id="PotatoLH" src="images/hands/image (10)l10.png" alt="Left Hand">
+            <img class="right-hand img" id="PotatoRH" src="images/hands/image (10)r10.png"alt="Right Hand">
+            <img class="legs img" id="PotatoLegs" src="images/legs/image (2).png" alt=" Legs">
+            
+        </div>
+
+        <!-- Customization Options -->
+
+        <div class="customization-options">
+            <h2>Choose Your Parts:</h2>
+            
+            <div class="the-parts">
+                <button  id="faces" class="btn">faces</button>
+                <button  id="hands"class="btn">hands</button>
+                <button  id="legs" class="btn">legs</button>
+                
+            </div>
+
+            
+
+            <div class="card-grid">
+                
+                    <div class="card" role="button" data-face="1">
+                        <div class="card-inner">
+                            <img  class="item1" src="images/kawaii faces/image (1).png">
+                        </div>
+                    </div>
+
+                    <div class="card" role="button" data-face="2">
+                        <div class="card-inner">
+                            <img  class="item1" src="images/kawaii faces/image (2).png">
+                        </div>
+                    </div>
+                
+                    <div class="card" role="button" data-face="3">
+                        <div class="card-inner">
+                            <img  class="item1" role="button" src="images/kawaii faces/image (3).png" >
+                        </div>
+                    </div>
+                
+                    <div class="card" role="button" data-face="4">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (4).png"> 
+                        </div>   
+                    </div>
+
+                    <div class="card" role="button" data-face="5">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (5).png"> 
+                        </div>   
+                    </div>
+
+                    <div class="card" role="button" data-face="6">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (6).png"> 
+                        </div>   
+                    </div>
+
+                    <div class="card" role="button" data-face="7">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (7).png"> 
+                        </div>   
+                    </div>
+
+                    <div class="card" role="button" data-face="8">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (8).png"> 
+                        </div>   
+                    </div>
+
+                    <div class="card" role="button" data-face="9">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (9).png">
+                         </div>   
+                    </div>
+
+                    <div class="card" role="button" data-face="10">
+                        <div class="card-inner">
+                            <img class="item1" src="images/kawaii faces/image (10).png">
+                         </div>   
+                    </div>
+
+                   
+
+
+
+                     
+                    
+                    
+        
+
+                    
+                   
+                    
+                    
+            </div>        
+                        
+        </div>
+
+        <script src="script.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCeuPVOcvK23V8RjBvXxVtbXER1pj885Eg",
+              authDomain: "avateto-77755.firebaseapp.com",
+              projectId: "avateto-77755",
+              storageBucket: "avateto-77755.firebasestorage.app",
+              messagingSenderId: "881562313336",
+              appId: "1:881562313336:web:7047128768334d06a1038d",
+              measurementId: "G-2EV9V697ZG"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+    </body>
+</html>
