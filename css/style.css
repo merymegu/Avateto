@@ -1,0 +1,357 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; 
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  
+}
+
+h2 {
+  background-color: #fff0f0;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+   color: #382b22;
+  text-shadow: 2px 2px 2px rgba(203, 0, 176, 0.5); 
+  }
+
+
+.potato-character{
+
+  position: relative;
+  width:35%;
+  height: 100%;
+  background-color: #fff0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.img{
+max-width: 100%; /* Image will not exceed the width of its container */
+}
+
+.body {
+position: absolute;
+width: 65%;
+z-index: 3;
+
+
+
+}
+
+.face {
+position: absolute;
+top: 45%;
+left: 30%;
+width: 40%;
+z-index: 4;
+  
+
+}
+
+.left-hand {
+  position: absolute;
+  top: 45%;
+  right: 65%;
+  width: 30%;
+}
+
+
+.right-hand {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  width: 30%;
+
+
+  
+}
+ 
+
+
+ 
+.legs {
+
+    position: absolute;
+    top: 61.75%;
+    left: 33%;
+    width: 35%;
+}
+ 
+
+
+/* Customization Options Section *//* General Styles for Larger Screens (default) */
+.customization-options {
+  display: flex;
+  margin:0px;
+  background-color:  #fff0f0;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; /* Ensure the container spans full width */
+  padding: 0px;
+  box-sizing: border-box; 
+ gap:15px
+}
+
+.the-parts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow buttons to wrap to a new line */
+  position: relative;
+  width: 100%; /* Ensure the container fits the parent */
+  height: 20%; /* Adjust height based on content */
+  background-color: #fff0f0;
+  margin: 0%;
+  box-sizing: border-box;
+  gap: 15px; /* Add space between buttons */
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+button.btn {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),  background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.btn::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.btn:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+
+button.btn:hover::before {
+  box-shadow: 0 0 0 2px #634250, 0 0.5em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.btn:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+
+button.btn:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
+/* Card Grid Section */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  width: 100%;
+  height: 83vh;
+  padding: 10px;
+  overflow-y: auto; /* Add scrollbar if content overflows vertically */
+  background-color: #fff0f0;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding and border in size calculations */
+}
+
+/* Card Styling */
+.card {
+  --bg: pink;
+  --contrast: #e2e0e0;
+  --grey: #93a1a1;
+  position: relative;
+  background-color: var(--bg);
+  border-radius: 90px;
+  padding: 6px;
+}
+
+.card-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: var(--contrast);
+  color: rgb(199, 196, 196);
+  overflow: hidden;
+  border-radius: 90px;
+}
+
+.card-inner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure images fit nicely */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Add hover effect */
+}
+
+/* For tablets (768px and smaller) */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust card size */
+    gap: 10px; /* Smaller gap between cards */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .card-inner {
+    height: 200px; /* Smaller card height */
+    font-size: 24px; /* Adjust font size */
+  }
+ 
+  .face {
+    position: absolute;
+    top: 47%;
+    left: 30%;
+    width: 40%;
+    z-index: 4;
+      
+    
+    }
+    
+    .left-hand {
+      position: absolute;
+      top: 45%;
+      right: 64%;
+      width: 30%;
+    }
+    
+    
+    .right-hand {
+      position: absolute;
+      top: 45%;
+      left: 64%;
+      width: 30%;
+     
+    }
+
+    .legs {
+      position: absolute;
+      top: 57%;
+      left: 35%;
+      width: 30%;
+    }
+}
+
+/* For phones (480px and smaller) */
+@media (max-width: 480px) {
+    .container {
+      display: flex; /* Stack the elements vertically */
+      flex-wrap: wrap; /* Allow elements to wrap to a new line */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .potato-character{
+      width: 100%;
+      height: 100%;
+    }
+    .body{
+      width:30%;
+
+    }
+  .face {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    width: 20%;
+    z-index: 4;
+      
+    
+    }
+    
+    .left-hand {
+      position: absolute;
+      top: 46%;
+      right: 57%;
+      width: 15%;
+    }
+    
+    
+    .right-hand {
+      position: absolute;
+      top: 46%;
+      left: 57%;
+      width: 15%;
+     
+    }
+
+    .legs {
+      position: absolute;
+      top: 56%;
+      left: 40%;
+      width: 20%;
+    }
+        
+  .customization-options{
+    height: 100%;
+    width: 100%;
+    
+
+  }
+  .the-parts {
+   height: 100%;
+    width: 100%;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px; /* Smaller gap between buttons */
+    padding: 5px; /* Reduce padding */
+  }
+
+  button.btn {
+    width: 100%; /* Buttons span full width */
+    margin: 0; /* Remove margin */
+    font-size: 12px; /* Smaller font size */
+    gap: 0px; /* Smaller gap between buttons */
+    
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Smaller gap */
+    max-height: auto; /* Remove height restriction */
+    padding: 5px; /* Reduce padding */
+  }
+
+  .card-inner {
+    height: 100%; 
+  
+  }
+}
