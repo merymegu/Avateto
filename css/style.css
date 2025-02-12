@@ -37,7 +37,7 @@ h2 {
 
 }
 .img{
-max-width: 100%; /* Image will not exceed the width of its container */
+max-width: 100%; 
 }
 
 .body {
@@ -97,7 +97,7 @@ z-index: 4;
   background-color:  #fff0f0;
   align-items: center;
   flex-direction: column;
-  width: 100%; /* Ensure the container spans full width */
+  width: 100%; 
   padding: 0px;
   box-sizing: border-box; 
  gap:15px
@@ -107,14 +107,14 @@ z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow buttons to wrap to a new line */
+  flex-wrap: wrap; 
   position: relative;
-  width: 100%; /* Ensure the container fits the parent */
-  height: 20%; /* Adjust height based on content */
+  width: 100%; 
+  height: 20%;
   background-color: #fff0f0;
   margin: 0%;
   box-sizing: border-box;
-  gap: 15px; /* Add space between buttons */
+  gap: 15px;
 }
 
 button {
@@ -217,24 +217,24 @@ button.btn:active::before {
 .card-inner img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Ensure images fit nicely */
+  object-fit: contain; 
 }
 
 .card:hover {
-  transform: scale(1.05); /* Add hover effect */
+  transform: scale(1.05); 
 }
 
 /* For tablets (768px and smaller) */
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust card size */
-    gap: 10px; /* Smaller gap between cards */
-    padding: 8px; /* Reduce padding */
+    gap: 10px; 
+    padding: 8px;
   }
 
   .card-inner {
-    height: 200px; /* Smaller card height */
-    font-size: 24px; /* Adjust font size */
+    height: 200px;
+    font-size: 24px;
   }
  
   .face {
@@ -274,8 +274,8 @@ button.btn:active::before {
 /* For phones (480px and smaller) */
 @media (max-width: 480px) {
     .container {
-      display: flex; /* Stack the elements vertically */
-      flex-wrap: wrap; /* Allow elements to wrap to a new line */
+      display: flex; 
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
     }
@@ -330,24 +330,23 @@ button.btn:active::before {
   .the-parts {
    height: 100%;
     width: 100%;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 5px; /* Smaller gap between buttons */
-    padding: 5px; /* Reduce padding */
+    flex-direction: column; 
+    gap: 5px; 
+    padding: 5px; 
   }
 
   button.btn {
-    width: 100%; /* Buttons span full width */
-    margin: 0; /* Remove margin */
-    font-size: 12px; /* Smaller font size */
-    gap: 0px; /* Smaller gap between buttons */
-    
+    width: 100%; 
+    margin: 0;
+    font-size: 12px;
+    gap: 0px; 
   }
 
   .card-grid {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 10px; /* Smaller gap */
-    max-height: auto; /* Remove height restriction */
-    padding: 5px; /* Reduce padding */
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+    max-height: auto; 
+    padding: 5px; 
   }
 
   .card-inner {
