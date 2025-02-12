@@ -4,24 +4,23 @@ document.addEventListener('click', function (e) {
     const btnHands = document.getElementById("hands");
     const btnLegs = document.getElementById("legs");
 
-    // If the "faces" button is clicked, generate face cards
+  
     if (e.target === btnFaces) {
         generateFacesCards();
     }
 
-    // If a card with data-face is clicked, update the face image
+    
     if (card && card.dataset.face) {
         const faceNumber = card.dataset.face;
         const newSrc = `images/kawaii faces/image (${faceNumber}).png`;
         document.getElementById("Potatoface").src = newSrc;
     }
 
-    // If the "hands" button is clicked, generate hand cards
     if (e.target === btnHands) {
         generateHandCards();
     }
 
-    // If a card with data-hand is clicked, update the hand images
+   
     if (card && card.dataset.hand) {
         const handsNumber = card.dataset.hand;
         const lhands = `images/hands/image (${handsNumber})l${handsNumber}.png`;
@@ -30,12 +29,12 @@ document.addEventListener('click', function (e) {
         document.getElementById("PotatoRH").src = rhands;
     }
 
-    // If the "legs" button is clicked, generate legs cards
+
     if (e.target === btnLegs) {
         generateLegsCards();
     }
 
-    // If a card with data-leg is clicked, update the legs image
+ 
     if (card && card.dataset.leg) {
         const legsNumber = card.dataset.leg;
         const legs = `images/legs/image (${legsNumber}).png`;
@@ -43,7 +42,6 @@ document.addEventListener('click', function (e) {
     }
 });
 
-// Function to generate faces cards dynamically
 function generateFacesCards() {
     const cardGrid = document.querySelector('.card-grid');
     cardGrid.innerHTML = ''; // Clear existing cards
@@ -67,7 +65,7 @@ function generateFacesCards() {
     }
 }
 
-// Function to generate hands cards dynamically
+
 function generateHandCards() {
     const cardGrid = document.querySelector('.card-grid');
     cardGrid.innerHTML = ''; // Clear existing cards
@@ -91,7 +89,7 @@ function generateHandCards() {
     }
 }
 
-// Function to generate legs cards dynamically
+
 function generateLegsCards() {
     const cardGrid = document.querySelector('.card-grid');
     cardGrid.innerHTML = ''; // Clear existing cards
